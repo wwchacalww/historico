@@ -89,6 +89,38 @@ export class DiaryPDFUsecase {
       }
     }
 
+    for (let i=0; i <=9; i++) {
+      if(i <= 6) {
+        const alt = 576 + (i * 16)
+        pdf.rect(10, alt, 170, 16).stroke()
+        pdf.rect(180, alt, 135, 16).stroke()
+        pdf.rect(315, alt, 135, 16).stroke()
+        pdf.rect(450, alt, 135, 16).stroke()
+      } else {
+        const alt = 583 + (6 * 16) + ( 14 * (i - 6))
+        pdf.rect(10, alt, 170, 14).stroke()
+        pdf.rect(180, alt, 135, 14).stroke()
+        pdf.rect(315, alt, 135, 14).stroke()
+        pdf.rect(450, alt, 135, 14).stroke()
+      }
+    }
+
+    for (let i=0; i <=3; i++) {
+      const alt = 740 + (i * 14)
+      pdf.rect(10, alt, 40, 14).stroke()
+      pdf.rect(50, alt, 40, 14).stroke()
+      pdf.rect(90, alt, 280, 14).stroke()
+      pdf.rect(370, alt, 115, 14).stroke()
+      pdf.rect(485, alt, 100, 14).stroke()
+    }
+    
+
+
+
+
+    
+    
+
     txt = "Data Nasc.:  "+"30/11/2004"
     pdf.x = 15
     pdf.text(txt, {align: "left", lineGap: 3})
